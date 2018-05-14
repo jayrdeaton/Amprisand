@@ -1,0 +1,2 @@
+# Amprisand
+Node assertion library
