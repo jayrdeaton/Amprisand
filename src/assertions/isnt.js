@@ -6,7 +6,13 @@ let isntAction = (test) => {
 };
 
 let evaluate = (data, test, operation) => {
-  if (operation(data, test)) throw new Error(`${data} is ${test}`);
+  if (operation(data, test)) {
+    if (test !== undefined) {
+      throw new Error(`${data} is ${test}`)
+    } else {
+      throw new Error(`${data} is`)
+    };
+  };
   return true;
 };
 
