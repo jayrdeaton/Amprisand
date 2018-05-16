@@ -1,0 +1,32 @@
+{
+  "name": "amprisand",
+  "version": "0.0.0",
+  "description": "Node assertion library",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha src/test; exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jayrdeaton/Amprisand.git"
+  },
+  "keywords": [
+    "Node",
+    "Assertion",
+    "Assert",
+    "Library"
+  ],
+  "author": "Jay Deaton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jayrdeaton/Amprisand/issues"
+  },
+  "homepage": "https://github.com/jayrdeaton/Amprisand#readme",
+  "dependencies": {
+    "mocha": "^5.1.1",
+    "npm": "^6.0.1"
+  },
+  "devDependencies": {
+    "faker": "^4.1.0"
+  }
+}
