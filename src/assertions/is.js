@@ -17,7 +17,6 @@ let evaluate = (data, test, operation) => {
 };
 
 let isExtension = () => {
-  console.log('here')
   Array.prototype.is = function(test) {
     // console.log('Array');
     return evaluate(this.valueOf(), test, compareArrays);
