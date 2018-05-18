@@ -86,6 +86,26 @@ describe('isnt', () => {
       is(error);
     });
   });
+  describe('object.is(object)', () => {
+    it('should assert', () => {
+      let result, error;
+      let value = {
+        array: [ faker.random.number(), faker.random.number(), faker.random.number() ],
+        boolean: faker.random.boolean(),
+        number: faker.random.number(),
+        object: { a: faker.random.word(), b: faker.random.word(), c: faker.random.word() },
+        string: faker.random.word(),
+      };
+      let test = JSON.parse(JSON.stringify(value));
+      try {
+        result = value.isnt(test);
+      } catch(err) {
+        error = err;
+      };
+      isnt(result);
+      is(error);
+    });
+  });
   describe('object.isnt(string)', () => {
     it('should assert', () => {
       let result, error, value = { value: faker.random.word() }, test = value.value;
