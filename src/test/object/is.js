@@ -95,6 +95,7 @@ describe('is', () => {
         number: faker.random.number(),
         object: { a: faker.random.word(), b: faker.random.word(), c: faker.random.word() },
         string: faker.random.word(),
+        null: null
       };
       let test = JSON.parse(JSON.stringify(value));
       try {
@@ -156,7 +157,14 @@ describe('is', () => {
   });
   describe('object.is(Object)', () => {
     it('should assert', () => {
-      let result, error, value = { value: faker.random.word() }, test = Object;
+      let value = {
+        array: [ faker.random.number(), faker.random.number(), faker.random.number() ],
+        boolean: faker.random.boolean(),
+        number: faker.random.number(),
+        object: { a: faker.random.word(), b: faker.random.word(), c: faker.random.word() },
+        string: faker.random.word()
+      };
+      let result, error, test = Object;
       try {
         result = value.is(test);
       } catch(err) {

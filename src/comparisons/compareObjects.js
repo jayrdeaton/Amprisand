@@ -3,6 +3,7 @@ let { objectIsEmpty } = require('../helpers'),
 
 let compareObjects = (value, test) => {
   if (test === undefined || test === null) {
+    if (value === test) return true;
     if (!value || objectIsEmpty(value)) return false;
     return true;
   };
