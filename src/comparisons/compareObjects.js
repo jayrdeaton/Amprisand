@@ -9,8 +9,8 @@ let compareObjects = (value, test) => {
   };
   if (typeof test === 'function') test = test(value);
   if (typeof test === 'object') {
-    if (Object.keys(value).length !== Object.keys(test).length) return false;
-    for (let key of Object.keys(value)) {
+    if (Object.getOwnPropertyNames(value).length !== Object.getOwnPropertyNames(test).length) return false;
+    for (let key of Object.getOwnPropertyNames(value)) {
       if (typeof value[key] === 'object') {
         if (Array.isArray(value[key])) {
           if (!compareArrays(value[key], test[key])) return false;
