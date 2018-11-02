@@ -22,9 +22,7 @@
     "url": "https://github.com/jayrdeaton/Amprisand/issues"
   },
   "homepage": "https://github.com/jayrdeaton/Amprisand#readme",
-  "dependencies": {
-    "npm": "^6.1.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "faker": "^4.1.0",
     "mocha": "^5.2.0"
