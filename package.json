@@ -23,10 +23,10 @@
   },
   "homepage": "https://github.com/jayrdeaton/Amprisand#readme",
   "dependencies": {
-    "mocha": "^5.1.1",
-    "npm": "^6.0.1"
+    "npm": "^6.1.0"
   },
   "devDependencies": {
-    "faker": "^4.1.0"
+    "faker": "^4.1.0",
+    "mocha": "^5.2.0"
   }
 }

@@ -1,16 +1,16 @@
 let { compareArrays, compareBooleans, compareNumbers, compareObjects, compareStrings } = require('../comparisons');
 
 let isAction = (test) => {
-  if (!test) throw new Error(`${test} isn't`);
+  if (!test) throw new Error(`${JSON.stringify(test)} isn't`);
   return true;
 };
 
 let evaluate = (data, test, operation) => {
   if (!operation(data, test)) {
     if (test !== undefined) {
-      throw new Error(`${data} is not ${test}`)
+      throw new Error(`${JSON.stringify(data)} is not ${JSON.stringify(test)}`)
     } else {
-      throw new Error(`${data} isn't`)
+      throw new Error(`${JSON.stringify(data)} isn't`)
     };
   };
   return true;
